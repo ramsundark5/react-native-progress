@@ -111,7 +111,7 @@ export class ProgressCircle extends Component {
 
     const Surface = rotation ? AnimatedSurface : ART.Surface;
     const Shape = animated ? AnimatedArc : Arc;
-    const progressValue = animated ? this.progressValue : progress;
+    const progressValue = progress.value;//animated ? this.progressValue : progress;
     const angle = animated
       ? Animated.multiply(progress, CIRCLE)
       : progress * CIRCLE;
